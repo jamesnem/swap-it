@@ -6,22 +6,19 @@ const testButtonFunction=()=>{
 
 let socket = io();
 
-
 socket.on('number', (msg) => {
     console.log('Random number: ' + msg);
 })
 
-console.log('test')
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.sidenav');
+  var instances = M.Sidenav.init(elems, options);
+});
 $(document).ready(function(){
   console.log('Ready')
   
-  //bind the button
-  $('#testButton').click(testButtonFunction)
-
-  //test get call
-  $.get('/test?user_name="Fantastic User"',(result)=>{
-    console.log(result)
+  $("#main-nav").load("components/navbar.html",()=> {
+    $('.sidenav').sidenav();
+   
   })
-
-
 })

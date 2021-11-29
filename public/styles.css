@@ -1,26 +1,43 @@
-.helloInput {
-  width: 200px;
-}
+
 
 .title{
-  color: white;
+  color: rgb(0, 0, 0);
 }
 .mainText{
-  color:white;
+  color:rgb(0, 0, 0);
 }
 
 body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  background-color: #B783C3;
+  background-color: #e4e4e4;
 
 }
 
-.page-footer{
-  background-color: #9E65A9;
+footer{
+  padding-left: 300px;
+  padding-right: 15px;
 }
+
 main {
   flex: 1 0 auto;
+  padding-left: 100px;
+}
+
+#main-nav {
+  color: #e4e4e4;
 }
     
+
+header{
+  padding-left: 255px;
+  padding-right: 15px;
+}
+
+@media only screen and (max-width : 992px) {
+  header, main, footer {
+    padding-left: 0;
+  }
+}
+      

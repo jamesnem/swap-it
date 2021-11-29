@@ -23,21 +23,21 @@
 
     <main>
         <div class="container">
-            <h2 class="title">About Me</h2>
+            <h2 class="title">Previous Works</h2>
             <div class="row">
-                <div class="col s9">
-                    <p class="flow-text mainText">This section will be filled with text about my current IT interests,
-                        education and contributions.</p>
-                    <p class="flow-text mainText">This section will be filled with text about my current IT interests,
-                        education and contributions.</p>
-                    <p class="flow-text mainText">This section will be filled with text about my current IT interests,
-                        education and contributions.</p>
-                    <p class="flow-text mainText">This section wll be filled with text about my current IT interests,
-                        education and contributions.</p>
-                </div>
-                <div class="col s3">
-                    <img src="assets/me.png" alt="james nemecek photo" width="120%">
-                </div>
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input placeholder="Search Project" id="search_pro" type="text" class="validate">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="carousel" id="carousel-projects">
+                <a class="carousel-item" href="#one!"><img src="assets/explorer.png"></a>
+                <a class="carousel-item" href="#two!"><img src="assets/sublearn.png"></a>
+                <a class="carousel-item" href="#three!"><img src="assets/climbing.jpg"></a>
             </div>
         </div>
     </main>
@@ -49,7 +49,6 @@
                     src="assets/git-logo.svg" style="height: 20px; padding-right: 15px;">Formed upon this boiler
                 plate</a>
         </div>
-
     </footer>
 
     <!-- socket IO Served by the server -->
@@ -62,6 +61,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <script src="env.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#carousel-projects').carousel();
+        });
+    </script>
 
 </body>
 
