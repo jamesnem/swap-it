@@ -17,5 +17,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/jamesnem/sit725-2021-t3-prac3.git"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }

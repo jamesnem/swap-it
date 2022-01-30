@@ -28,65 +28,58 @@
                 <div class="col s6 offset-s3">
                     <div class="card">
                         <div class="card-content">
-                            <h4 id="lol">Log in to your account</h4>
+                            <h4 id="lol">Create an account</h4>
                             <form class="row">
                                 <div class="row">
-                                    <div class="input-field col s10 offset-s1">
-                                        <input id="email" type="email" class="validate" required="" aria-required="true"
-                                            oninvalid="this.setCustomValidity('Please enter valid email')" oninput="setCustomValidity('')">
+                                    <div class="input-field col s12">
+                                        <input id="full_name" type="text" class="validate" required="" aria-required="true" 
+                                        oninvalid="this.setCustomValidity('Enter first name')" oninput="setCustomValidity('')">
+                                        <label for="full_name">Full Name</label>
+                                        <span class="helper-text" data-error="invalid name"></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="email" type="email" class="validate" required="" aria-required="true" 
+                                        oninvalid="this.setCustomValidity('Enter valid email')" oninput="setCustomValidity('')">
                                         <label for="email">Email</label>
                                         <span class="helper-text" data-error="invalid email"></span>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="input-field col s10 offset-s1">
-                                        <input id="loginPassword" type="password" class="validate" required=""
+                                    <div class="input-field col s12">
+                                        <input id="registerPassword" type="password" class="validate" required=""
                                             aria-required="true" pattern=".{8,16}"
                                             oninvalid="this.setCustomValidity('Password must be 8 - 16 characters')" oninput="setCustomValidity('')">
-                                        <label for="loginPassword">Password</label>
+                                        <label for="registerPassword">Password</label>
                                         <span class="helper-text" data-error="invalid password"></span>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="confirmPassword" type="password" class="validate" required=""
+                                        aria-required="true" pattern=".{8,16}">
+                                        <label for="confirmPassword">Confirm password</label>
+                                        <span class="helper-text" data-error="invalid password"></span>
+                                    </div>
+                                </div>
+
                                 <div class="row center-align">
-                                    <button class="btn waves-effect waves-light large" type="submit"
-                                        onclick="validation()">Login
-                                        <i class="material-icons right">arrow_forward</i>
+                                    <button class="btn waves-effect waves-light" type="submit" name="action">Create
+                                        <i class="material-icons right">person_add</i>
                                     </button>
                                 </div>
                             </form>
-
+                            <br>
 
                             <div class="row center-align">
-                                <p id="lol2">Alternative sign in</p>
+                                <p class="center-align">Already have an account?</p>
+                                <a class="center-align" href="index.html">Sign in</a>
                             </div>
-                            <div class="row">
-                                <div class="column">
-                                    <a href="https://www.facebook.com"><img src="assets/facebook_icon.png"
-                                            alt="facebook icon" style="width:50px;height:50px;"></a>
-                                </div>
-                                <div class="column">
-                                    <a href="https://www.twitter.com"><img src="assets/twitter_icon.png"
-                                            alt="twitter icon" style="width:50px;height:50px;"></a>
-                                </div>
-                                <div class="column">
-                                    <a href="https://www.linkedin.com"><img src="assets/linkedin_icon.png"
-                                            alt="linkedin icon" style="width:50px;height:50px;"></a>
-                                </div>
-                            </div>
-
-                            <p class="center-align">______________________________________</p>
                         </div>
-
-
-                        <div class="row center-align">
-                            <p class="center-align">Don't have an account?</p>
-                            <a class="center-align" href="register.html"> Create account</a>
-                        </div>
-                        <br>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     </main>
 
@@ -102,8 +95,6 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-    <script src="env.js"></script>
 </body>
 
 </html>
