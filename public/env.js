@@ -1,16 +1,16 @@
-function validatePassword() {
-    var validatePassword = document.getElementById("registerPassword");
-    var validateConfirmP = document.getElementById("confirmPassword");
+var passwordValidate = document.getElementById("registerPassword");
+var confirmValidate = document.getElementById("confirmPassword");
 
-    if (validatePassword.value != validateConfirmP.value) {
-        validateConfirmP.setCustomValidity("Passwords Don't Match");
-        
-    } else {
-        validateConfirmP.setCustomValidity('');
+function validatePassword() {
+    if (passwordValidate.value != confirmValidate.value) {
+        confirmValidate.setCustomValidity('Passwords don\'t\ match');
+    }
+    else {
+        confirmValidate.setCustomValidity('')
     }
 }
 
 $(document).ready(function () {
-    password.onchange = validatePassword();
-    validateConfirmp.onkeyup = validatePassword();
+    passwordValidate.onchange = validatePassword();
+    confirmValidate.onkeyup = validatePassword();
 })
