@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500");
+body {
+  font-family: "Roboto", sans-serif;
+}
+* {
+  margin: 0%;
+  padding: 0%;
+  list-style-type: none;
+  text-decoration: none;
+}
+html,
+body {
+  height: 100%;
+}
+
+.sidebar {
+  position: fixed;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  background: #024361;
+}
+.sidebar header {
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  line-height: 70px;
+  background: #055b82;
+  user-select: none;
+}
+.sidebar ul a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid black;
+  transition: 0.4s;
+}
+ul li:hover a {
+  padding-left: 50px;
+}
+section {
+  width: 80%;
+  height: 1000px;
+  float: left;
+  background: #8b9ba3;
+  padding: 10px;
+  display: grid;
+  place-items: center;
+}
+.card {
+  position: relative;
+  height: 470px;
+  width: 340px;
+  display: block;
+  background: white;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.15);
+  transition: 0.4s linear;
+}
+.card .CardImage {
+  height: 350px;
+  background: #055b82;
+  overflow: hidden;
+}
+.CardImage img {
+  height: 100%;
+  width: 100%;
+  transition: 0.3s;
+}
+.card.active .CardImage img {
+  transform: scale(1.1);
+  opacity: 0.6;
+}
+.card .cardContent {
+  position: absolute;
+  bottom: 0px;
+  background: white;
+  width: 100%;
+  text-align: center;
+  padding: auto;
+}
+.cardContent .cardTittle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333333;
+}
+.cardContent .cardInfo {
+  font-size: 18px;
+  font-weight: 500;
+  color: #e74c3c;
+}
+.boton p {
+  color: #666666;
+  font-size: 16px;
+  text-align: justify;
+  line-height: 1.8em;
+}
+.boton button {
+  float: left;
+  padding: 7px 15px;
+  font-size: 17px;
+  background: #e74c3c;
+  color: white;
+  font-weight: 500;
+  border: none;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.boton button:hover {
+  transform: scale(0.9);
+  background: #e64533;
+}
+.card:hover {
+  box-shadow: 0px 3px 35px 0px rgba(0, 0, 0, 0.3);
+}
+.boton {
+  display: none;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <title>Seller Panal</title>
+    <link href="sellerstyle.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+<body>
+ 
+  <!--seller side information bar-->
+    <div class="sidebar">
+        <header > <i class='fas fa-user' style='font-size:36px'></i> SELLER NAME</header>
+            <ul>
+                <li><a href="#"> seller name </a></li>
+                <li><a href="#"> seller contact </a></li>
+                <li><a href="#"> seller email </a></li>
+
+                <li><a href="#">inbox   <i class="far fa-comments"  style='font-size:30px' ></i></a></li>
+                <li><a href="#">deleted items   <i class="far fa-trash-alt" style='font-size:30px'></i></a></li>
+                
+                
+            </ul>
+    </div>
+        <div class="card">
+
+            <div class="CardImage">
+                <img src="image/grapefruit.jpg" >
+            </div>
+            <div class="cardContent">
+                <div class="cardTittle">THIS IS CARD TITTLE</div>
+                <div class="cardInfo">
+                   
+                </div>
+                <div class="boton">
+                    <p>the is the discription of the card. user will write the discription of the product here and further specifications about the product. </p>
+                    <button> read more</button> 
+            </div>
+    </div>
+    
+    <script>
+        $('.card').hover(function(){
+           if($(this).hasCLass("active")){
+               $('.card .boton').slideUp(function(){
+                    $('.card').removeClass("active");
+               });
+           } else{
+               $('.card').addClass("active");
+               $('.card .boton').stop().slideDown();
+           }
+        });
+       </script>
+<!--this the code for card-->
+</body>
+</html>
