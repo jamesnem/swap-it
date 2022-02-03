@@ -5,15 +5,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>James Nemecek</title>
+    <title>Login</title>
 
-    <!-- Compiled and minified CSS -->
     <!-- Materialze-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
     <!-- Materialize icons-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    <!--External reference sheet-->
     <link href="mycss.css" rel="stylesheet">
 </head>
 
@@ -28,13 +28,13 @@
                 <div class="col s6 offset-s3">
                     <div class="card">
                         <div class="card-content">
-                            <h4 id="lol">Log in to your account</h4>
+                            <h4>Log in to your account</h4>
                             <form class="row">
                                 <div class="row">
                                     <div class="input-field col s10 offset-s1">
-                                        <input id="email" type="email" class="validate" required="" aria-required="true"
+                                        <input id="loginEmail" type="email" class="validate" required="" aria-required="true"
                                             oninvalid="this.setCustomValidity('Please enter valid email')" oninput="setCustomValidity('')">
-                                        <label for="email">Email</label>
+                                        <label for="loginEmail">Email</label>
                                         <span class="helper-text" data-error="invalid email"></span>
                                     </div>
                                 </div>
@@ -48,8 +48,7 @@
                                     </div>
                                 </div>
                                 <div class="row center-align">
-                                    <button class="btn waves-effect waves-light large" type="submit"
-                                        onclick="validation()">Login
+                                    <button class="btn waves-effect waves-light large" type="submit" onsubmit="validatePassword()">Login
                                         <i class="material-icons right">arrow_forward</i>
                                     </button>
                                 </div>
@@ -91,7 +90,6 @@
     </main>
 
     <footer>
-
     </footer>
 
     <!-- socket IO Served by the server -->
