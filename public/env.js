@@ -1,3 +1,4 @@
+//Declare variables to user password inputs
 var passwordValidate = document.getElementById("registerPassword");
 var confirmValidate = document.getElementById("confirmPassword");
 
@@ -11,7 +12,7 @@ function validatePassword() {
     }
 }
 
-
+//Funtions and methods that are declared once document is opened
 $(document).ready(function () {
     passwordValidate.onchange = validatePassword();
     confirmValidate.onkeyup = validatePassword();
