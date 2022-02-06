@@ -49,3 +49,6 @@ npm ERR! Could not resolve dependency:
 npm ERR! peer socket.io@">=3.1.0" from @socket.io/admin-ui@0.2.0
 npm ERR! node_modules/@socket.io/admin-ui
 npm ERR! @socket.io/admin-ui@"\*" from the root project
+
+Proof that it works:
+/assets/ScreendumpChatsandSeller.JPG
