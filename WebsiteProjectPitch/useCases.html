@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SIT725 Project Pitch - SWAP-<i>IT.</i></title>
+    <title>Web-based barter system powered by environmentally-conscious students.<i>IT.</i></title>
+<br>
+<br>
+    <!-- Compiled and minified CSS -->
+    <!-- Materialze-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Materialize icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#">
+                    <a href="https://www.deakin.edu.au/">Deakin University, Summer 2021 - 2022</a> 
+                    <!-- <img src="assets/LoneIceberg_7292.JPG" alt="" class="circle responsive-img"
+                        style="height: 100%;padding-top: 5px; padding-left: 15px;"> notice the "circle" class -->
+
+                </a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="https://www.linkedin.com/learning/me/collections?u=2104084">Linkedin</a></li>
+                </ul>
+            </div>
+        </nav>
+        <nav>
+            <div class="nav-wrapper">
+              <a href="#" class="brand-logo right" style="height: 100%;"><img src="assets/Iceberg_7292.JPG" class= "circle responsive-img" ></a>
+             <!-- how to add class "brand-logo right" to styles.css?  -->
+              <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li><a href="#" data-target="slide-out" class="sidenav-trigger" style="display:block"><i class="material-icons">menu</i></a></li>
+                <li><a href="https://trello.com/b/zobcj7AO/agile-board-swap-it-website-based-barter-system">Our Trello Board </a></li>
+                <li><a href="assets/SRS_final.pdf">About Our Project - SRS</a></li>
+                <li><a href="assets/useCases.html">Use Cases</a></li>
+                <li><a href="assets/Swap-IT - Sprint 1 Review.pptx">Our Progress</a></li>  
+              </ul>
+            </div>
+          </nav>
+                
+        <ul id="slide-out" class="sidenav">    
+            <li><a>Projects</a></li>
+            <li><a>Settings</a></li>
+        </ul>
+    </header>
+    <main>
+
+        <div class="container">
+            <a class="btn-floating btn-large waves-effect waves-light blue grey darken-1" style = "position: fixed; right: 10px; bottom: 10px"><i class="material-icons">add</i></a>
+            <h1 class="title; text-align: center" >SIT725 Project Pitch - SWAP-<i>IT.</i></h1>
+
+            <h3 class="flow-text mainText" style="font-size:large;">Web-based barter system powered by environmentally-conscious students.</h3>
+            <div class="row">
+                <p class="flow-text mainText" style="font-size: xx-large; text-align: center">Use Cases</p>
+            </div>
+
+            <div class="row">
+              <ul class="collapsible popout">
+                <li class="active">
+                  <div class="collapsible-header"><i class="material-icons">account_circle</i>Login and Signon</div>
+                  <div class="collapsible-body flow-text"><span>User wants to create login and log onto the website. User expects to have an account which will retain 
+                    their account details, search, sale and purchase history.
+                  </span></div>
+                </li>
+                <li >
+                  <div class="collapsible-header"><i class="material-icons">search</i>Item Lookup</div>
+                  <div class="collapsible-body flow-text"><span>User wants to log in and search for items or services of interest, i.e., "Bicycle", "Babysitting". 
+                    User expects to receive a list of available offers or a message "Nothing found". </span></div>
+                </li>
+                <li >
+                  <div class="collapsible-header"><i class="material-icons">list</i>Listing Offers of Goods and Services</div>
+                  <div class="collapsible-body flow-text"><span>User wants to log in and offer barter items or services for exchange, i.e., "Bicycle", "Lawnmowing". 
+                    User expects to create a list of items which will be shown to buyers in response to search. User expects to be able to edit 
+                  the listings. </span></div>
+                </li>
+                <li >
+                  <div class="collapsible-header"><i class="material-icons">chat</i>Communication between Parties</div>
+                  <div class="collapsible-body flow-text"><span>User wants to get in touch with the seller and arrange exchange. 
+                    User expects that chat message will reach the seller and seller's response will reach the user. User expects 
+                  that chat history is stored on the server and is available for later review.</span></div>
+                </li>
+                <li >
+                  <div class="collapsible-header"><i class="material-icons">remove_circle_outline</i>Pausing or Removal of an Item</div>
+                  <div class="collapsible-body flow-text"><span>Seller wants to pause or remove the item from sales list. 
+                    Seller expects that search by buyers will not return amended item.</span></div>
+                </li>
+                <li >
+                  <div class="collapsible-header"><i class="material-icons">transform</i>Flagging Items as Sold</div>
+                  <div class="collapsible-body flow-text"><span>Seller wants to flag the item as sold.
+                    Seller expects that search by buyers will not return sold item.</span></div>
+                </li>
+              </ul>
+                </div>
+        
+
+<!-- <div class="row center " style="padding-top:50px;"> -->
+
+<!-- </div>
+</div> -->
+
+</main>
+<footer class="page-footer">
+<div class="footer-copyright">
+            <div class="container">
+                © 2022 Copyright Viva Barter!
+                <a class="grey-text text-lighten-4 right" href="https://github.com/JuliaAxelrod/sit725-2021-t3-p3-AB2.git"><img
+                        src="assets/git-logo.svg" style="height: 20px; padding-right: 15px;"></i>JuliaAxelrod gitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- socket IO Served by the server -->
+    <script src="/socket.io/socket.io.js"></script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src=".\env.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.collapsible');
+    var instances = M.Collapsible.init(elems);
+  });
+    </script>
+
+</body>
+
+</html>
