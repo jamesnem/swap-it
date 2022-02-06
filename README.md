@@ -52,3 +52,9 @@ npm ERR! @socket.io/admin-ui@"\*" from the root project
 
 Proof that it works:
 /assets/ScreendumpChatsandSeller.JPG
+
+Finally, added Website about us and our project.
+
+<========================================================>
+James, kindly place updated SRS to ./WebsiteProjectPitch/assets
+<========================================================>
