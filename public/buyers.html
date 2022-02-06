@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <title>BUYERS PAGE TO DISPLAY SWAP</title>
+    <link href="buyers.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+<body>
+ 
+  <!--seller side information bar-->
+    <div class="sidebar">
+        <header > <i class='fas fa-user' style='font-size:36px'></i> BUYERS PANEL PAGE</header>
+            <ul>
+                <li><a href="#"> Buyers Firstname and Lastname </a></li>
+                <li><a href="#"> Buyers Contact and social media page </a></li>
+                <li><a href="#">Just A click away, you may add your picture/service </a> </li>
+                <li><a href="#"> Buyers email address </a></li>
+                <li><a href="#"> Go to cart </a></li>
+                <li><a href="#">inbox   <i class="far fa-comments"  style='font-size:30px' ></i></a></li>
+                <li><a href="#">items swapped out   <i class="far fa-trash-alt" style='font-size:30px'></i></a></li>
+                
+                
+            </ul>
+    </div>
+        <div class="card">
+            <div class="CardImage">
+                <img src="images/chair.jpg" >
+                </div>
+            <div class="cardContent">
+                <div class="cardTitle">HERE IS MY SWAP OPTION</div>
+                <div class="cardTDescription">SERVICE SWAP PAGE</div>
+               <div class="cardInfo">
+                   
+                </div>
+                <div class="boton">
+                    <p>Here is a sample image of goods i am willing to swap.Buyer enters descriPtion of goods they are willing to exchange here or service they can offer</p>
+                    <button> read more</button> 
+            </div>
+    </div>
+    
+    <script>
+        $('.card').hover(function(){
+           if($(this).hasCLass("active")){
+               $('.card .boton').slideUp(function(){
+                    $('.card').removeClass("active");
+               });
+           } else{
+               $('.card').addClass("active");
+               $('.card .boton').stop().slideDown();
+           }
+        });
+       </script>
+<!--this the code for card-->
+</body>
+</html>
