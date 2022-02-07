@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="scripts.js" type="module"></script>
+    <title>Julia's Barter Exchange Website Chat</title>
+
+    <!-- Compiled and minified CSS -->
+    <!-- Materialze-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <!-- Materialize icons-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+        width: 90%;
+        max-width: 1200px;
+      }
+      #message-container {
+        border: 1px solid black;
+        flex-grow: 1;
+        overflow-y: auto;
+      }
+      #message-container div {
+        background-color: rgb(241, 243, 243);
+        padding: 5px;
+      }
+      #message-container div:nth-child(2n) {
+        background-color: rgb(236, 241, 235);
+        padding: 5px;
+      }
+    </style>
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="message-container"></div>
+    <form id="form">
+      <label for="message-input">Message: </label>
+      <input type="text" id="message-input" />
+      <button type="submit" id="send-button">Send</button> <br />
+      <label for="room-input">User:</label>
+      <input type="text" id="room-input" />
+      <button type="button" id="room-button">Join</button>
+    </form>
+  </body>
+</html>

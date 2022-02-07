@@ -1,0 +1,63 @@
+.helloInput {
+  width: 200px;
+}
+
+.title {
+  color: rgb(10, 101, 124);
+}
+.mainText {
+  color: white;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: #caf0f3;
+}
+
+.page-footer {
+  background-color: #22dbfc;
+}
+main {
+  flex: 1 0 auto;
+}
+.nav-wrapper {
+  background-color: #58e3fb;
+}
+
+.brand-logo img {
+  height: 40px;
+}
+
+.brand-logo,
+.right {
+  height: 100%;
+}
+.brand-logo {
+  height: 100%;
+}
+
+.right {
+  height: 100%;
+}
+
+p {
+  font: flow-text;
+  font-size: small;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.flow-text {
+  font-size: small;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card-image {
+  height: 180px; /* Your height here */
+  overflow: hidden;
+}
+
+/* body {
+  margin-top: 50px;
+} */
