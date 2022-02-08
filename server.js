@@ -1,14 +1,15 @@
 let express = require("express");
 let app = express();
-
-//var app = require('express')();
 let http = require('http').createServer(app);
 let io = require('socket.io')(http);
+
+const userAuth = require('./public/Routers/users');
 
 var port = process.env.PORT || 8080;
 
 app.use(express.static(__dirname + '/public'));
 
+app.use('/', userAuth);
 
 //Create error message that catches invalid routes
 app.use((res, req, next) => {
