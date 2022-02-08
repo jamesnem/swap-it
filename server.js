@@ -10,6 +10,24 @@ var port = process.env.PORT || 8080;
 app.use(express.static(__dirname + '/public'));
 
 
+//Create error message that catches invalid routes
+app.use((res, req, next) => {
+  const error = new Error("Route Not Found");
+  error.status = 404;
+  next(error);
+})
+
+app.use((err, req, res, next) => {
+  res.status(err.status || 500)
+  res.send({
+    err: {
+      status: err.status || 500,
+      message: err.message,
+    },
+  })
+})
+
+
 //socket test
 io.on('connection', (socket) => {
   console.log('a user connected');
