@@ -1,15 +1,42 @@
 let express = require("express");
-let app = express();
+const app = express();
+const bodyParse = require("body-parser")
+const bcrypt = require('bcrypt')
 let http = require('http').createServer(app);
 let io = require('socket.io')(http);
-
-const userAuth = require('./public/Routers/users');
-
-var port = process.env.PORT || 8080;
+const userStructure = require('./public/models/user_model')
+require('./public/database/init_Mongo')
 
 app.use(express.static(__dirname + '/public'));
+var port = process.env.PORT || 8080;
 
-app.use('/', userAuth);
+app.use(bodyParse.urlencoded({extended: false}));
+
+app.get('/', async(req, res) => {
+  res.sendFile('/public/index.html', { root: '.' })
+})
+
+app.get('/register', async(req, res) => {
+  res.sendFile(__dirname + '/public/register.html')
+})
+
+app.post('/register', async(req, res) => {
+  try{
+    const hashedPassword = await bcrypt.hash(req.body.userPassword, 10)
+    let addUser = new userStructure({
+      name: req.body.userName,
+      email: req.body.userEmail,
+      password: hashedPassword
+    })
+    addUser.save();
+    res.redirect('/')
+  }
+  catch{
+    res.redirect('/register')
+  }
+})
+
+app.use(express.json())
 
 //Create error message that catches invalid routes
 app.use((res, req, next) => {
@@ -28,23 +55,6 @@ app.use((err, req, res, next) => {
   })
 })
 
-
-//socket test
-io.on('connection', (socket) => {
-  console.log('a user connected');
-  socket.on('disconnect', () => {
-    console.log('user disconnected');
-  });
-  setInterval(()=>{
-    socket.emit('number', parseInt(Math.random()*10));
-  }, 1000);
-
-});
-
-
 http.listen(port,()=>{
   console.log("Listening on port ", port);
 });
-
-//this is only needed for Cloud foundry 
-require("cf-deployment-tracker-client").track();

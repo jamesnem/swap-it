@@ -2,11 +2,19 @@
   "name": "james-nemecek-service",
   "version": "0.0.01",
   "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.1",
     "cf-deployment-tracker-client": "*",
     "commander": "^2.6.0",
+    "ejs": "^3.1.6",
     "express": "^4.14.1",
+    "http-errors": "^2.0.0",
     "http-post": "^0.1.1",
     "http-proxy": "^1.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.3.1",
+    "mongoose": "^6.2.1",
     "socket.io": "^2.3.0"
   },
   "main": "server.js",
@@ -19,6 +27,7 @@
     "url": "https://github.com/jamesnem/sit725-2021-t3-prac3.git"
   },
   "devDependencies": {
+    "dotenv": "^16.0.0",
     "nodemon": "^2.0.15"
   }
 }

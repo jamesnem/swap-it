@@ -31,10 +31,10 @@
                     <div class="card">
                         <div class="card-content">
                             <h4>Create an account</h4>
-                            <form action="seller.html" class="row">
+                            <form action="/register" class="row" method="post">
                                 <div class="row">
                                     <div class="input-field col s10 offset-s1">
-                                        <input id="full_name" type="text" class="validate" required="" aria-required="true" 
+                                        <input id="full_name" name="userName" type="text" class="validate" required="" aria-required="true" 
                                         oninvalid="this.setCustomValidity('Enter first name')" oninput="setCustomValidity('')">
                                         <label for="full_name">Full Name</label>
                                         <span class="helper-text" data-error="invalid name"></span>
@@ -42,7 +42,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="input-field col s10 offset-s1">
-                                        <input id="registerEmail" type="email" class="validate" required="" aria-required="true" 
+                                        <input id="registerEmail" name="userEmail" type="email" class="validate" required="" aria-required="true" 
                                         oninvalid="this.setCustomValidity('Enter valid email')" oninput="setCustomValidity('')">
                                         <label for="registerEmail">Email</label>
                                         <span class="helper-text" data-error="invalid email"></span>
@@ -50,7 +50,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="input-field col s10 offset-s1">
-                                        <input id="registerPassword" type="password" class="validate" required=""
+                                        <input id="registerPassword" name="userPassword" type="password" class="validate" required=""
                                             aria-required="true" pattern=".{8,16}"
                                             oninvalid="this.setCustomValidity('Password must be 8 - 16 characters')" oninput="setCustomValidity('')">
                                         <label for="registerPassword">Password</label>
