@@ -4,10 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
     <title>Seller Panal</title>
+
     <link href="sellerstyle.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 </head>
 <body>
@@ -26,7 +35,9 @@
                 
             </ul>
     </div>
-        <div class="card">
+    <main>
+    <!--this the code for card-->
+        <!-- <div class="card">
 
             <div class="CardImage">
                 <img src="image/grapefruit.jpg" >
@@ -40,10 +51,63 @@
                     <p>the is the discription of the card. user will write the discription of the product here and further specifications about the product. </p>
                     <button> read more</button> 
             </div>
+    </div> -->
+    <div class="container">    
+        <div class="row" id="items">
+        </div>            
     </div>
-    
-    <script>
-        $('.card').hover(function(){
+
+    <div id="create-item-form" class="modal modal-fixed-footer" style="background-color: cornsilk;">
+      <div class="modal-content" >
+        <h4>Post new item</h4>
+        <div class="row">
+          <form class="col s12">
+
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="item-id" type="number">
+                <label for="item-id">Item ID</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="item-title" type="text">
+                <label for="item-title">Item Title</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="item-description" type="text">
+                <label for="item-description">Item Description</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="item-image" type="file" onchange="readURL(this)" accept="Image/*">
+                <label for="item-image" style="margin-top: 15px;">Select Image</label>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-light black btn">Close</a>
+        <a href="#!" class="waves-effect waves-light blue btn" id="save-item">Save</a>
+      </div>
+    </div>
+    <div style="padding-bottom: 5px; margin: 80px;">
+        <a class=" btn-floating btn-large waves-effect waves-light blue right pulse modal-trigger" href="#create-item-form"><i class="material-icons">add</i></a>
+      </div>
+
+    </main>
+   
+
+    <!-- <script> -->
+        <!-- $('.card').hover(function(){
            if($(this).hasCLass("active")){
                $('.card .boton').slideUp(function(){
                     $('.card').removeClass("active");
@@ -53,7 +117,14 @@
                $('.card .boton').stop().slideDown();
            }
         });
-       </script>
-<!--this the code for card-->
+       </script> -->
+       
+       
+       <script src="/socket.io/socket.io.js"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+       <!-- <script src="/socket.io/socket.io.js"></script> -->
+       <script src="sellerenv.js"></script>
+
 </body>
 </html>

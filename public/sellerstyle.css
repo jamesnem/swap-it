@@ -11,6 +11,10 @@ body {
 html,
 body {
   height: 100%;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  /* background-color: hsl(39, 90%, 89%); */
 }
 
 .sidebar {
@@ -44,16 +48,17 @@ body {
 ul li:hover a {
   padding-left: 50px;
 }
-section {
+main {
   width: 80%;
-  height: 1000px;
+  flex: 1 0 auto;
+  /* height: 1000px; */
   float: left;
   background: #8b9ba3;
   padding: 10px;
   display: grid;
   place-items: center;
 }
-.card {
+/* .card {
   position: relative;
   height: 470px;
   width: 340px;
@@ -121,4 +126,4 @@ section {
 }
 .boton {
   display: none;
-}
+} */
