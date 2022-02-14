@@ -32,12 +32,12 @@
                     <div class="card">
                         <div class="card-content">
                             <h4>Log in to your account</h4>
-                            <form class="row" action="seller.html">
+                            <form class="row" id="formLogin" action="/login" method="post">
                                 <div class="row">
 
                                      <!--Require user to enter email type input and display custom error message-->
                                     <div class="input-field col s10 offset-s1">
-                                        <input id="loginEmail" type="email" class="validate" required="" aria-required="true"
+                                        <input id="loginEmail" name="logEmail" type="email" class="validate" required="" aria-required="true"
                                             oninvalid="this.setCustomValidity('Please enter valid email')" oninput="setCustomValidity('')">
                                         <label for="loginEmail">Email</label>
                                         <span class="helper-text" data-error="invalid email"></span>
@@ -47,7 +47,7 @@
 
                                     <!--Require user to enter password that is between 8 and 16 characters and display custom error message-->
                                     <div class="input-field col s10 offset-s1">
-                                        <input id="loginPassword" type="password" class="validate" required=""
+                                        <input id="loginPassword" name="logPassword" type="password" class="validate" required=""
                                             aria-required="true" pattern=".{8,16}"
                                             oninvalid="this.setCustomValidity('Password must be 8 - 16 characters')" oninput="setCustomValidity('')">
                                         <label for="loginPassword">Password</label>
@@ -62,25 +62,6 @@
                                     </button>
                                 </div>
                             </form>
-
-
-                            <div class="row center-align">
-                                <p id="lol2">Alternative sign in</p>
-                            </div>
-                            <div class="row">
-                                <div class="column">
-                                    <a href="https://www.facebook.com"><img src="assets/facebook_icon.png"
-                                            alt="facebook icon" style="width:50px;height:50px;"></a>
-                                </div>
-                                <div class="column">
-                                    <a href="https://www.twitter.com"><img src="assets/twitter_icon.png"
-                                            alt="twitter icon" style="width:50px;height:50px;"></a>
-                                </div>
-                                <div class="column">
-                                    <a href="https://www.linkedin.com"><img src="assets/linkedin_icon.png"
-                                            alt="linkedin icon" style="width:50px;height:50px;"></a>
-                                </div>
-                            </div>
 
                             <p class="center-align">______________________________________</p>
                         </div>
@@ -111,6 +92,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <script src="env.js"></script>
+
+    <script>
+        const form = document.getElementById('formLogin')
+        form.addEventListener('submit', login)
+
+        async function login(event) {
+            event.preventDefault()
+            if (result.status === 'granted') {
+                console.log('Token granted: ', result.data)
+                localStorage.setItem('token', result.data)
+                alert('Success')
+            } else {
+                alert(result.error)
+            }
+        }
+    </script>
 </body>
 
 </html>
