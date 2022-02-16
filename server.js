@@ -1,32 +1,32 @@
 let express = require("express");
 const app = express();
-const bodyParse = require("body-parser");
-const bcrypt = require('bcrypt');
 let http = require('http').createServer(app);
-let io = require('socket.io')(http);
+app.use(express.static(__dirname + '/public/View'));
+app.use(express.json());
+require('./public/database/init_Mongo'); 
+
 const jwt = require('jsonwebtoken');
 const userStructure = require('./public/models/user_model');
-require('./public/database/init_Mongo');
-
-app.use(express.static(__dirname + '/public'));
-var port = process.env.PORT || 8080;
-app.use(express.json());
+const bodyParse = require("body-parser");
 app.use(bodyParse.urlencoded({ extended: false }));
+const bcrypt = require('bcryptjs');
+
+var port = process.env.PORT || 8080;
 
 app.get('/login', async (req, res) => {
-  res.sendFile(__dirname + '/public/index.html')
+  res.sendFile(__dirname + '/public/View/index.html')
 })
 
 app.get('/register', async (req, res) => {
-  res.sendFile(__dirname + '/public/register.html')
+  res.sendFile(__dirname + '/public/View/register.html')
 })
 
 app.get('/preferences', async (req, res) => {
-  res.sendFile(__dirname + '/public/preferences.html')
+  res.sendFile(__dirname + '/public/View/preferences.html')
 })
 
 app.get('/seller', async (req, res) => {
-  res.sendFile(__dirname + '/public/seller.html')
+  res.sendFile(__dirname + '/public/View/seller.html')
 })
 
 app.post('/register', async (req, res) => {
