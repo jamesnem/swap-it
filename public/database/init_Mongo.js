@@ -2,7 +2,7 @@ const { MongoClient } = require('mongodb');
 const mongoose = require('mongoose');
 
 //Connect with mongoDB
-const uri = "mongodb+srv://practicals:i3JedOwQO0NHDWDS@cluster0.1qyzs.mongodb.net/swap-it?retryWrites=true&w=majority";
+const uri = "mongodb+srv://practicals:3aRW0bxz4vMb31Mj@cluster0.1qyzs.mongodb.net/swap-it?retryWrites=true&w=majority";
 
 //Connect mongoose with mongoDB
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })

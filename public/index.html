@@ -92,22 +92,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <script src="env.js"></script>
-
-    <script>
-        const form = document.getElementById('formLogin')
-        form.addEventListener('submit', login)
-
-        async function login(event) {
-            event.preventDefault()
-            if (result.status === 'granted') {
-                console.log('Token granted: ', result.data)
-                localStorage.setItem('token', result.data)
-                alert('Success')
-            } else {
-                alert(result.error)
-            }
-        }
-    </script>
 </body>
 
 </html>
