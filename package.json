@@ -1,26 +1,15 @@
 {
-  "name": "james-nemecek-service",
+  "name": "swap-it-abosede",
   "version": "0.0.01",
   "dependencies": {
-    "@socket.io/admin-ui": "^0.2.0",
     "cf-deployment-tracker-client": "*",
     "commander": "^2.6.0",
-<<<<<<< HEAD
-    "express": "^4.17.2",
-    "http-post": "^0.1.1",
-    "http-proxy": "^1.18.1",
-    "mongodb": "^4.3.1",
-    "socket.io": "^2.3.0"
-=======
-    "cors": "^2.8.5",
     "express": "^4.14.1",
     "http-post": "^0.1.1",
     "http-proxy": "^1.18.1",
-    "latest": "^0.2.0",
-    "snowpack": "^3.8.8",
-    "socket.io": "^4.4.1",
-    "socket.io-client": "^4.4.1"
->>>>>>> 09ffe11af9ae2867f20b6287b61331df09543f3b
+    "mongodb": "^4.3.1",
+    "mongoose": "^6.2.1",
+    "socket.io": "^2.3.0"
   },
   "main": "server.js",
   "scripts": {
@@ -29,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jamesnem/sit725-2021-t3-prac3.git"
+    "url": "https://github.com/jamesnem/swap-it.git"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
