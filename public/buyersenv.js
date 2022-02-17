@@ -51,12 +51,12 @@ $(document).ready(function(){
       "method": "POST",
       "timeout": 0,
       "headers": {
-        "Content-Type": "application/json"
+      "Content-Type": "application/json"
       },
       "data": JSON.stringify(data),
     };
     
-    $.ajax(settings).done(function (response) {
+    $.ajax(settings).done(function(response) {
       console.log(response);
       $('#items').append(createItem(data));
       var instance = M.Modal.getInstance($('.modal'));

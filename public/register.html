@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register</title>
+
+    <!-- Materialze-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Materialize icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--External reference sheet-->
+    <link href="mycss.css" rel="stylesheet">
+</head>
+
+
+<body>
+    <header>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col s6 offset-s3">
+                    <div class="card">
+                        <div class="card-content">
+                            <h4>Create an account</h4>
+                            <form class="row">
+                                <div class="row">
+                                    <div class="input-field col s10 offset-s1">
+                                        <input id="full_name" type="text" class="validate" required="" aria-required="true" 
+                                        oninvalid="this.setCustomValidity('Enter first name')" oninput="setCustomValidity('')">
+                                        <label for="full_name">Full Name</label>
+                                        <span class="helper-text" data-error="invalid name"></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s10 offset-s1">
+                                        <input id="registerEmail" type="email" class="validate" required="" aria-required="true" 
+                                        oninvalid="this.setCustomValidity('Enter valid email')" oninput="setCustomValidity('')">
+                                        <label for="registerEmail">Email</label>
+                                        <span class="helper-text" data-error="invalid email"></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s10 offset-s1">
+                                        <input id="registerPassword" type="password" class="validate" required=""
+                                            aria-required="true" pattern=".{8,16}"
+                                            oninvalid="this.setCustomValidity('Password must be 8 - 16 characters')" oninput="setCustomValidity('')">
+                                        <label for="registerPassword">Password</label>
+                                        <span class="helper-text" data-error="invalid password"></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s10 offset-s1">
+                                        <input id="confirmPassword" type="password" class="validate" required=""
+                                        aria-required="true" pattern=".{8,16}">
+                                        <label for="confirmPassword">Confirm password</label>
+                                        <span class="helper-text" data-error="invalid password"></span>
+                                    </div>
+                                </div>
+
+                                <div class="row center-align">
+                                    <button class="btn waves-effect waves-light" type="submit" name="action"  onclick="validatePassword()">Create
+                                        <i class="material-icons right">person_add</i>
+                                    </button>
+                                </div>
+                            </form>
+
+                            <p id="what"></p>
+                            
+                            <p class="center-align">______________________________________</p>
+
+                            <div class="row center-align">
+                                <p class="center-align">Already have an account?</p>
+                                <a class="center-align" href="index.html">Sign in</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+    </footer>
+
+    <!-- socket IO Served by the server -->
+    <script src="/socket.io/socket.io.js"></script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src="env.js"></script>
+</body>
+
+</html>

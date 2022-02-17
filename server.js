@@ -1,5 +1,5 @@
 let express = require("express");
-let dbo = require("./db/conn");
+let dbo = require("./db/batabase");
 let app = express();
 
 //var app = require('express')();

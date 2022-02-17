@@ -1,0 +1,17 @@
+body {
+    background-color: rgb(232, 236, 219);
+}
+
+.container {
+    max-width: 500px;
+    width: 75%;
+    margin: auto;
+    padding-top: 80px;
+}
+
+.column {
+    float: left;
+    width: 29.33%;
+    padding: 5px;
+    padding-left: 10%;
+  }
