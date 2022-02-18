@@ -1,18 +1,30 @@
 let express = require("express");
-const app = express();
+let app = express();
 let http = require('http').createServer(app);
-app.use(express.static(__dirname + '/public/View'));
-app.use(express.json());
-require('./public/database/init_Mongo'); 
 
+require('./public/database/init_Mongo'); 
 const jwt = require('jsonwebtoken');
 const userStructure = require('./public/models/user_model');
 const bodyParse = require("body-parser");
-app.use(bodyParse.urlencoded({ extended: false }));
 const bcrypt = require('bcryptjs');
+
+//Create jsonwebtoken secret to be shared between server and client
+const jwtSecret = "asdqwewerertrtytyu123%$#dgdfg"
+
+const routes = require('./public/Routers/user-router')
+
+app.use('/api', routes);
+app.use(express.static(__dirname + '/public/View'));
+app.use(express.json());
+app.use(bodyParse.urlencoded({ extended: false }));
 
 var port = process.env.PORT || 8080;
 
+//***********************************************************************************************************************************
+//API's have been moved to server.js for the sake of functionality, as an error was repeatedly occuring when placed in user-router.js
+//***********************************************************************************************************************************
+
+//Retrieve post HTML data from appropriate routes
 app.get('/login', async (req, res) => {
   res.sendFile(__dirname + '/public/View/index.html')
 })
@@ -29,6 +41,7 @@ app.get('/seller', async (req, res) => {
   res.sendFile(__dirname + '/public/View/seller.html')
 })
 
+//Hash users password and store it to the database
 app.post('/register', async (req, res) => {
   const hashedPassword = await bcrypt.hash(req.body.userPassword, 10)
   try {
@@ -45,14 +58,12 @@ app.post('/register', async (req, res) => {
   }
 })
 
-const secretCombination = 'asdwerrtyertkjdfg';
-//Allow users to log in to account with previously used 
+//Allow users to log in to an existing account
 app.post('/login', async (req, res) => {
   const email = req.body.logEmail;
   const password = req.body.logPassword;
 
-  //Secret for jsonwebtoken
-
+  //Return an error if user entered wrong email
   const logUser = await userStructure.findOne({ email }).lean()
   if (!logUser) {
     console.log("Email has not been registered")
@@ -60,25 +71,27 @@ app.post('/login', async (req, res) => {
     return res.json({ status: 'error', error: 'Invalid username/password' })
   }
 
+  //Redirect user to seller page if both credentials are equal
   if (await bcrypt.compare(password, logUser.password)) {
     console.log("Login successful")
     res.redirect('/seller')
     return res.json({ status: 'granted'})
   }
 
+  //Return an error if user entered wrongpassword
   else {
     console.log("Password credentials incorrect")
     res.redirect('/')
     return res.json({ status: 'error', error: 'Invalid username/password' })
   }
 
-  /*Further security using jsonwebtoken
+  /*Need further time to work on jsonwebtoken to send to index.html to provide further security
     if (await bcrypt.compare(password, user.password)) {
       const token = jwt.sign(
         {
           email: user.email
         },
-        JWT_SECRET
+        jwtSecret
       )
       //return res.json({ status: 'ok', data: token })
     }
@@ -86,7 +99,6 @@ app.post('/login', async (req, res) => {
 })
 
 app.post('/seller', async(req, res) => {
-
 })
 
 //Create error message that catches invalid routes
