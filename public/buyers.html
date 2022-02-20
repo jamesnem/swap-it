@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script> -->
     <title>BUYERS DASHBOARD</title>
     <link href="buyers.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script> -->
 </head>
 <body>
  
@@ -26,7 +28,16 @@
          
             </ul>
     </div>
-        <div class="card">
+    <div id="chat-screen" class="row">
+        <input type="text" id="chat-msg"/>
+        <a href="#!" class="waves-effect waves-green btn" id="chat-send-btn">Send</a>
+        <div id="chat-msg-list">
+        </div>
+    </div>
+    <div class="container">
+        <div id="items"></div>
+    </div>
+        <!-- <div class="card">
             <div class="CardImage">
                 <img src="images/chair.jpg" >
                 </div>
@@ -40,19 +51,28 @@
                     <p>Here is a sample image of goods i am willing to swap.Buyer enters description of goods they are willing to exchange</p>
                     <button> read more</button> 
             </div>
-    </div> 
-    <script>
+    </div>  -->
+    <!-- <script>
         $('.card').hover(function(){
-           if($(this).hasCLass("active")){
-               $('.card .boton').slideUp(function(){
+            
+            if(this.hasCLass("active")){
+                $('.card .boton').slideUp(function(){
                     $('.card').removeClass("active");
-               });
-           } else{
-               $('.card').addClass("active");
-               $('.card .boton').stop().slideDown();
-           }
+                });
+            } else{
+                $('.card').addClass("active");
+                $('.card .boton').stop().slideDown();
+            }
         });
-       </script>
+       </script> -->
 <!--this the code for card-->
+<script src="/socket.io/socket.io.js"></script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script src="./buyersenv.js"></script>
 </body>
 </html>

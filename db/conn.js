@@ -1,4 +1,4 @@
-const uri = "mongodb+srv://haroonmu:6FeuLYdYPylUB2Al@cluster0.eeoib.mongodb.net/seller?retryWrites=true&w=majority";
+const uri = "mongodb+srv://aoall:Tasmania123@cluster0.buqds.mongodb.net/items-project?retryWrites=true&w=majority";
 let mongoose = require("mongoose")
 let dbConnection;
 

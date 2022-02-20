@@ -12,7 +12,13 @@ const itemSchema = mongoose.Schema({
         lowercase: true,
         unique: true
   
-    }
+    },
+    itemID: {
+        type: String,
+        required: true,
+        lowercase: true,
+        unique: true
+    },
   })
 
 module.exports = mongoose.model('item', itemSchema);

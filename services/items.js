@@ -1,4 +1,4 @@
-const ItemModel = require("../models/item_model");
+const ItemModel = require("../models/items_models");
 
 const getItemCollection = (keyword, res) =>{
     let query = {}
@@ -41,7 +41,7 @@ const putItem = (item, res) => {
 }
 
 const deleteItem = (id, res) => {
-    ItemModel.remove({_id:id},(err) => {
+    ItemModel.deleteOne({itemID: id},(err) => {
         if (err) throw err;
         res.send({ result: 204 });
     })
