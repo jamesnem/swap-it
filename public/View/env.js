@@ -17,12 +17,14 @@ $(document).ready(function () {
     passwordValidate.onchange = validatePassword();
     confirmValidate.onkeyup = validatePassword();
 
+    /*
     //Display message upon login
     const result = await fetch('http://localhost:8080/login')
     if (result.status === 'granted') {
-        // everythign went fine
+        // Everythign went fine
         alert('Login successful')
     } else {
         alert(result.error)
     }
+    */
 })
